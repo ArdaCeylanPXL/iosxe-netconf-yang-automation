@@ -28,6 +28,24 @@
         </ip>
       </Loopback>
     </interface>
+
+    <router-ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
+      <ospf>
+        <process-id>
+          <id>1</id>
+          <network>
+            <ip>192.168.56.0</ip>
+            <mask>0.0.0.255</mask>
+            <area>0</area>
+          </network>
+          <network>
+            <ip>10.10.10.0</ip>
+            <mask>0.0.0.255</mask>
+            <area>0</area>
+          </network>
+        </process-id>
+      </ospf>
+    </router-ospf>
     
   </native>
 </config>
