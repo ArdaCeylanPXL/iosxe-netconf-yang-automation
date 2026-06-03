@@ -1,17 +1,61 @@
 <config>
   <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
 
-    <hostname>NETCONF-R1</hostname>
+    <hostname>AUTOMATED-ROUTER</hostname>
 
     <interface>
 
       <GigabitEthernet>
         <name>1</name>
+        <description>WAN Interface</description>
 
-        <description>Configured-by-NETCONF configuratie</description>
+        <ip>
+          <address>
+            <primary>
+              <address>192.168.56.10</address>
+              <mask>255.255.255.0</mask>
+            </primary>
+          </address>
+        </ip>
+
       </GigabitEthernet>
 
+      <Loopback>
+        <name>0</name>
+
+        <ip>
+          <address>
+            <primary>
+              <address>10.10.10.1</address>
+              <mask>255.255.255.0</mask>
+            </primary>
+          </address>
+        </ip>
+
+      </Loopback>
+
     </interface>
+
+    <router>
+
+      <ospf>
+        <id>1</id>
+
+        <network>
+          <ip>192.168.56.0</ip>
+          <wildcard>0.0.0.255</wildcard>
+          <area>0</area>
+        </network>
+
+        <network>
+          <ip>10.10.10.0</ip>
+          <wildcard>0.0.0.255</wildcard>
+          <area>0</area>
+        </network>
+
+      </ospf>
+
+    </router>
 
   </native>
 </config>
