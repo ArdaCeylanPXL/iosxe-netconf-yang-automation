@@ -31,19 +31,17 @@
 
     <router>
       <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
-        <process-id>
-          <id>1</id>
-          <network>
-            <ip>192.168.56.0</ip>
-            <mask>0.0.0.255</mask>
-            <area>0</area>
-          </network>
-          <network>
-            <ip>10.10.10.0</ip>
-            <maskitem>0.0.0.255</maskitem>
-            <area>0</area>
-          </network>
-        </process-id>
+        <id>1</id>
+        <network>
+          <ip>192.168.56.0</ip>
+          <mask>0.0.0.255</mask>
+          <area>0</area>
+        </network>
+        <network>
+          <ip>10.10.10.0</ip>
+          <mask>0.0.0.255</mask>
+          <area>0</area>
+        </network>
       </ospf>
     </router>
 
