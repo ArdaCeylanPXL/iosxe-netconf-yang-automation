@@ -1,5 +1,4 @@
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
-  
   <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
     <hostname>NETCONF-R1</hostname>
     <interface>
@@ -27,7 +26,9 @@
         </ip>
       </Loopback>
     </interface>
-  </native> <router xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
+  </native>
+
+  <router-ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
     <ospf>
       <process-id>
         <id>1</id>
@@ -43,6 +44,5 @@
         </network>
       </process-id>
     </ospf>
-  </router>
-
+  </router-ospf>
 </config>
