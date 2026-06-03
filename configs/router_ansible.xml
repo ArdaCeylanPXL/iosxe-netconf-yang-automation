@@ -1,11 +1,12 @@
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-    <hostname>ANSIBLE-NETCONF-R1</hostname>
     
+    <hostname>NETCONF-R1</hostname>
+
     <interface>
       <GigabitEthernet>
         <name>1</name>
-        <description>WAN Interface via Ansible</description>
+        <description>WAN via Ansible NETCONF</description>
         <ip>
           <address>
             <primary>
@@ -18,7 +19,7 @@
 
       <Loopback>
         <name>0</name>
-        <description>Loopback via Ansible</description>
+        <description>Loopback via Ansible NETCONF</description>
         <ip>
           <address>
             <primary>
