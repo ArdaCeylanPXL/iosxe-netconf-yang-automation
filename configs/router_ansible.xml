@@ -1,8 +1,6 @@
 <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
   <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-    
     <hostname>NETCONF-R1</hostname>
-
     <interface>
       <GigabitEthernet>
         <name>1</name>
@@ -16,7 +14,6 @@
           </address>
         </ip>
       </GigabitEthernet>
-
       <Loopback>
         <name>0</name>
         <description>Loopback via Ansible NETCONF</description>
@@ -30,7 +27,6 @@
         </ip>
       </Loopback>
     </interface>
-
     <router>
       <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
         <id>1</id>
@@ -46,6 +42,5 @@
         </network>
       </ospf>
     </router>
-
   </native>
 </config>
